@@ -23,21 +23,17 @@ app = Flask(__name__)
 url = "http://136.233.78.185:8080/saclib/handle/123456789/"
 def sdata(course_code):
     data = {}
-    
     for code in dct[course_code]:
         text = urlopen(url + code).read()
         soup = BeautifulSoup(text, "html.parser")
-
         artifacts = soup.findAll('div', attrs={'class': 'artifact-title'})
         for artifact in artifacts:
             links = artifact.findAll('a')
             for link in links:
                 file_url = "http://136.233.78.185:8080" + link['href']
-
                 text = urlopen(file_url).read()
                 soup = BeautifulSoup(text, 'html.parser')
                 title = soup.title.string
-
                 file_links = soup.findAll('div', attrs={'class': 'file-link'})
                 for file_link in file_links:
                     file_a_tags = file_link.findAll('a')
