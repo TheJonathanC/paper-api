@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #A8E300;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .branding {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #A8E300;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 50px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #ffffff;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #bfbfbf;
+        }
+
+		a, a:visited{
+     		color: #0071E3;
+            text-decoration: none;
+		}
+        
+        footer {
+            color: #A8E300;
+            background-color: #333333;
+            opacity: 0.5;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        ::-webkit-scrollbar {
+  			width: 13px;
+		}
+        
+        ::-webkit-scrollbar-track { 
+  			background: #333333;
+		}
+
+		::-webkit-scrollbar-thumb {
+  			background: #A8E300; 
+  			border-radius: 10px;
+		}
+        
+        #parent {
+            display: flex;
+        }
+        #flex1 {
+            flex-grow: 15;
+            order: 2;
+        }
+        #flex2 {
+            flex-grow: 0.1;
+            order: 1;
+            line-height: 2.6;
+            font-size: x-small;
+        }
+    </style>
+    <title>expaper-api</title>
+</head>
+<body>
+	<div class="branding">
+    	NoteVault
+     </div>
+     
+    <header>
+        <h1>expaper-api</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Exam Paper API</h2>
+            <p>&emsp; This API has two "extensions".</p>
+                <br>
+                <br>
+            <p>1. Return all data</p>
+            <p>&emsp;<a href="https://expaper-api.onrender.com/exampapers">expaper-api.onrender.com/exampapers</a></p>
+                <br>
+            <p>2. Return for specific subject</p>
+            <p>&emsp;<a href="https://expaper-api.onrender.com/exampapers?code=178">expaper-api.onrender.com/exampapers?code=178 (BCA)</a></p>
+            <div id="parent">
+                <div id="flex1">
+                    <ul style="list-style: none;">
+                        <li>BCA - 178</li>
+                        <li>BBA - 177</li>
+                        <li>BSc - 176</li>
+                        <li>BCom - 174</li>
+                        <li>BA - 274</li>
+                    </ul>
+                    <p>Click on the white icon to go to the respective "extension code"</p>
+                </div>
+                <div id="flex2">
+                    <ul style="list-style: none;">
+                        <li><a href="https://expaper-api.onrender.com/exampapers?code=178">&#x26AA;</a></li>
+                        <li><a href="https://expaper-api.onrender.com/exampapers?code=177">&#x26AA;</a></li>
+                        <li><a href="https://expaper-api.onrender.com/exampapers?code=176">&#x26AA;</a></li>
+                        <li><a href="https://expaper-api.onrender.com/exampapers?code=174">&#x26AA;</a></li>
+                        <li><a href="https://expaper-api.onrender.com/exampapers?code=274">&#x26AA;</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2023 <span style="color:#A8E300">NoteVault</span> <i>Ver 2.0</i>. All rights reserved.</p>
+    </footer>
+</body>
+</html>
