@@ -1,5 +1,5 @@
 {
-    "BCA": {
+    "bca": {
         "1st Semester B.C.A. December 2022": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/984/1st%20Sem%20BCA%20Dec%202022.pdf?sequence=1&isAllowed=y",
         "1st Semester B.C.A. October 2018 & October 2019": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/920/1st%20Semester%20B.C.A.%20October%202018%20%26%20October%202019.pdf?sequence=1&isAllowed=y",
         "1st Semester B.C.A. February 2022": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/530/1st%20Semester%20B.C.A.%20February%202022.pdf?sequence=1&isAllowed=y",
@@ -26,7 +26,7 @@
         "6th Sem BCA April 2017 & April 2018": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/916/6th%20Sem%20BCA%20April%202017%20%26%20April%202018.pdf?sequence=1&isAllowed=y",
         "6th Semester B.C.A. 2021": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/481/6th%20Semester%20B.C.A.%202021.pdf?sequence=1&isAllowed=y"
     },
-    "BBA": {
+    "bba": {
         "1st Semester B.B.A. December 2022": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/978/1st%20Sem%20BBA%20Dec%202022.pdf?sequence=1&isAllowed=y",
         "1st Semester B.B.A. October 2018 & October 2019": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/897/1st%20Semester%20B.B.A.%20October%202018%20%26%20October%202019.pdf?sequence=1&isAllowed=y",
         "1st Semester B.B.A. February 2022": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/528/1st%20Semester%20B.B.A.%20February%202022.pdf?sequence=1&isAllowed=y",
@@ -56,7 +56,7 @@
         "6th Semester B.B.A. July 2022": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/605/6-SEM-BBA.pdf?sequence=1&isAllowed=y",
         "6th Semester B.B.A. 2021": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/479/6th%20Semester%20B.B.A.%202021.pdf?sequence=1&isAllowed=y"
     },
-    "BSC": {
+    "bsc": {
         "1st Semester B.Sc. December 2022": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/939/1st%20Semester%20B.Sc.%20December%202022.pdf?sequence=1&isAllowed=y",
         "1st Semester B.Sc. October 2018 & October 2019": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/925/1st%20Semester%20B.Sc.%20October%202018%20%26%20October%202019%20.pdf?sequence=1&isAllowed=y",
         "1st Semester B.Sc. February 2021": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/406/1st%20Semester%20B.Sc.%20February%202021.pdf?sequence=1&isAllowed=y",
@@ -84,7 +84,7 @@
         "6th Semester B.Sc. July 2022": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/607/6-SEM-BSC.pdf?sequence=1&isAllowed=y",
         "6th Semester B.Sc. 2021": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/483/6th%20Semester%20B.Sc.%202021.pdf?sequence=1&isAllowed=y"
     },
-    "BCOM": {
+    "bcom": {
         "1st Semester B.Com December 2022": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/981/1st%20Sem%20BCom%20Dec%202022.pdf?sequence=1&isAllowed=y",
         "1st Semester B.Com. October 2018 & October 2019": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/907/1st%20Semester%20B.Com.%20October%202018%20%26%20October%202019.pdf?sequence=1&isAllowed=y",
         "1st Semester B.Com February 2022": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/529/1st%20Semester%20B.Com.%20October%202018%20%26%20October%202019.pdf?sequence=3&isAllowed=y",
@@ -113,7 +113,7 @@
         "6th Semester B.Com July 2022": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/606/6-SEM-BCOM.pdf?sequence=1&isAllowed=y",
         "6th Semester B.Com 2021": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/477/6th%20Semester%20B.Com%202021.pdf?sequence=1&isAllowed=y"
     },
-    "BA": {
+    "ba": {
         "1st Semester B.A. December 2022": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/975/1st%20Sem%20BA%20Dec%202022.pdf?sequence=1&isAllowed=y",
         "1st Semester B.A. February 2022": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/618/1st%20Semester%20B.A.%20February%202022.pdf?sequence=1&isAllowed=y",
         "1st Semester B.A. October 2018 & October 2019": "http://136.233.78.185:8080/saclib/bitstream/handle/123456789/577/1st%20Semester%20B.A.%20October%202018%20%26%20October%202019.pdf?sequence=1&isAllowed=y",

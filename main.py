@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 from flask import Flask, jsonify, request, render_template
-import json
+import json, time
 
 dct = {
     "178": ["397", "303", "398", "301", "399", "480"],
@@ -11,14 +11,15 @@ dct = {
     "274": ["379", "281", "381", "283", "383", "279"]
 }
 names = {
-    "178": "BCA",
-    "177": "BBA",
-    "176": "BSC",
-    "174": "BCOM",
-    "274": "BA"
+    "178": "bca",
+    "177": "bba",
+    "176": "bsc",
+    "174": "bcom",
+    "274": "ba"
 }
 
 app = Flask(__name__)
+extime = 3.5 * 24 * 60 *60
 
 url = "http://136.233.78.185:8080/saclib/handle/123456789/"
 def sdata(course_code):
@@ -42,40 +43,76 @@ def sdata(course_code):
         
     return data
 
-def crjson():
-    cdata={}
-    for n in dct:
-        cdata[n]=sdata(n)
-    ndata = {names[k]:v for k,v in cdata.items()}
+class jsn:
+    def crjson():
+        cdata={}
+        for n in dct:
+            cdata[n]=sdata(n)
+        ndata = {names[k]:v for k,v in cdata.items()}
 
-    with open("test.json", "w") as outfile: 
-        json.dump(ndata, outfile,indent=4)
+        with open("test.json", "w") as outfile: 
+            json.dump(ndata, outfile,indent=4)
 
-def rdjson(code):
-    with open("test.json") as json_file:
-        rdata = json.load(json_file)
-    if code is not None:
-        return rdata[code]
-    else:
-        return rdata
+    def rdjson(code):
+        with open("test.json") as json_file:
+            rdata = json.load(json_file)
+        if code is not None:
+            return rdata[code]
+        else:
+            return rdata
+
+class cch:
+    @staticmethod
+    def load():
+        try:
+            with open("cache.json","r") as json_fil:
+                cac = json.load(json_fil)
+        except (FileNotFoundError, json.JSONDecodeError):
+            cac={}
+        return cac
+    
+    @staticmethod
+    def save(cache):
+        with open("cache.json","w") as infil:
+            json.dump(cache,infil,indent=4)
+cache = cch.load()
 
 @app.route("/")
 def home():
+    #change this!!!
     return render_template("body.html")
 
 @app.route("/scrapedata", methods=["GET"])
 def scraper():
-    crjson()
-    return rdjson(None)
+    jsn.crjson()
+    scp = jsn.rdjson(None)
+    tm = time.time()
+    cache["time"] = tm
+    cch.save(cache)
+    return scp
 
 @app.route("/exampapers", methods=["GET"])
 def get_cours():
-    mdata = rdjson(None)
-    ccode = request.args.get("code")
-    if ccode is not None and ccode in mdata:
-        return jsonify({ccode:mdata[ccode]})
+    if time.time() - cache.get("time",0) < extime:
+        print("cache exists")
+        mdata = jsn.rdjson(None)
+        ccode = request.args.get("code")
+        if ccode is not None and ccode in mdata:
+            return jsonify({ccode:mdata[ccode]})
+        else:
+            return jsonify(mdata)
     else:
-        return jsonify(mdata)
+        print("creating cache")
+        jsn.crjson()
+        mdata = jsn.rdjson(None)
+        tm = time.time()
+        cache["time"] = tm
+        cch.save(cache)
+        ccode = request.args.get("code")
+        if ccode is not None and ccode in mdata:
+            return jsonify({ccode:mdata[ccode]})
+        else:
+            return jsonify(mdata)
 
 @app.route("/bca-data",methods=["GET"])
 def bcadata():
