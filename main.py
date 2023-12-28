@@ -43,6 +43,16 @@ def sdata(course_code):
         
     return data
 
+def txtres():
+    t1 = "Helo, this is *ALOPAPERS-API*, "
+    t2 = "built for NoteVault. "
+    t3 = "https://collegerepo.vercel.app/ "
+    t4 = " This API returns previous year question papers and other stuff, "
+    t5 = "add a /exampapers to check it out, "
+    t6 = "add a /scrapedata to refresh scraped data."
+    txt = t1+t2+t3+t4+t5+t6
+    return txt
+
 class jsn:
     def crjson():
         cdata={}
@@ -79,8 +89,7 @@ cache = cch.load()
 
 @app.route("/")
 def home():
-    #change this!!!
-    return render_template("body.html")
+    return txtres()
 
 @app.route("/scrapedata", methods=["GET"])
 def scraper():
