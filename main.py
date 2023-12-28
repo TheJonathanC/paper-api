@@ -18,8 +18,9 @@ names = {
     "274": "ba"
 }
 
+exp = 3.5
 app = Flask(__name__)
-extime = 3.5 * 24 * 60 *60
+extime = exp * 24 * 60 *60
 
 url = "http://136.233.78.185:8080/saclib/handle/123456789/"
 def sdata(course_code):
